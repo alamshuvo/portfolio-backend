@@ -10,6 +10,5 @@ const blogsSchema = new Schema({
    
  },
 
-{}
 
 });
