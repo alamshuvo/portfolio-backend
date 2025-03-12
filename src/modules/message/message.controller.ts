@@ -8,7 +8,7 @@ const createMessage = catchAsync(async(req,res)=>{
     sendResponse(res,{
         statusCode:StatusCodes.CREATED,
         sucess:true,
-        message:"Blogs Created Sucessfully",
+        message:"Message send Sucessfully",
         data:result
     })
 })
@@ -18,7 +18,7 @@ const getAllMessage = catchAsync(async(req,res)=>{
     sendResponse(res,{
         statusCode:StatusCodes.OK,
         sucess:true,
-        message:"All Blogs Retrived Sucessfully",
+        message:"All Message Retrived Sucessfully",
         data:result
     })
 })
