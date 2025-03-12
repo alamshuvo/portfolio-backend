@@ -9,7 +9,7 @@ const createProjects = catchAsync(async(req,res)=>{
     sendResponse(res,{
         statusCode:StatusCodes.CREATED,
         sucess:true,
-        message:"Blogs Created Sucessfully",
+        message:"projects Created Sucessfully",
         data:result
     })
 })
@@ -19,42 +19,42 @@ const getAllProjects = catchAsync(async(req,res)=>{
     sendResponse(res,{
         statusCode:StatusCodes.OK,
         sucess:true,
-        message:"All Blogs Retrived Sucessfully",
+        message:"All projects Retrived Sucessfully",
         data:result
     })
 })
 
 const getSingleProject = catchAsync(async(req,res)=>{
-    const blogId = req.params.id;
-    const result = await projectService.getSingleProject(blogId);
+    const projectId = req.params.id;
+    const result = await projectService.getSingleProject(projectId);
     sendResponse(res,{
         statusCode:StatusCodes.OK,
         sucess:true,
-        message:"Single Blogs Retrived Sucessfully",
+        message:"Single projects Retrived Sucessfully",
         data:result
     })
 })
 
 const updateProject = catchAsync(async(req,res)=>{
-    const blogId = req.params.id;
+    const projectId = req.params.id;
     const payload = req.body
-    console.log(blogId,payload);
-    const result = await projectService.getUpdateProject(blogId,payload);
+
+    const result = await projectService.getUpdateProject(projectId,payload);
     sendResponse(res,{
         statusCode:StatusCodes.OK,
         sucess:true,
-        message:"Single Blogs update Sucessfully",
+        message:"Single projects update Sucessfully",
         data:result
     })
 })
 
 const deleteProject = catchAsync(async(req,res)=>{
-    const blogId = req.params.id;
-    const result = await projectService.deleteProject(blogId);
+    const projectId = req.params.id;
+    const result = await projectService.deleteProject(projectId);
     sendResponse(res,{
         statusCode:StatusCodes.OK,
         sucess:true,
-        message:"single blog delete sucessfully",
+        message:"single project delete sucessfully",
         data:result
     })
 })
