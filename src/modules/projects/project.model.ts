@@ -11,7 +11,16 @@ const projectSchema = new Schema({
  projectImage:{
     type:String
  },
+ title:{
+    type:String
+ },
 description:{
+    type:String
+},
+githubClient:{
+    type:String
+},
+githubServer:{
     type:String
 }
 
